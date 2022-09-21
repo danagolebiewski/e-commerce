@@ -15,7 +15,7 @@ router.get('/:id', (req, res) => {
   // be sure to include its associated Category and Tag data
 });
 
-// create new product
+// create new product - done
 router.post('/', (req, res) => {
   /* req.body should look like this...
     {
@@ -47,7 +47,7 @@ router.post('/', (req, res) => {
     });
 });
 
-// update product
+// update product - done
 router.put('/:id', (req, res) => {
   // update product data
   Product.update(req.body, {
@@ -90,7 +90,7 @@ router.put('/:id', (req, res) => {
 });
 
 router.delete('/:id', (req, res) => {
-  // delete one product by its `id` value
+  // delete one product by its `id` value - do this one 
 });
 
 module.exports = router;
