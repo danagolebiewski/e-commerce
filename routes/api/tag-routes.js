@@ -41,7 +41,7 @@ router.get("/:id", (req, res) => {
 });
 
 router.post("/", (req, res) => {
-  // create a new tag **** Have to work on this one***
+  // create a new tag 
   Tag.create(req.body)
     .then((tag) => res.status(200).json(tag))
     .catch((err) => {
@@ -51,7 +51,6 @@ router.post("/", (req, res) => {
 });
 
 router.put("/:id", (req, res) => {
-  // update a tag's name by its `id` value **** work on this one ***
   Tag.update(req.body, {
     where: {
       id: req.params.id,

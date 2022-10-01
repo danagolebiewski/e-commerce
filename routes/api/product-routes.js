@@ -20,7 +20,7 @@ router.get("/", (req, res) => {
     .catch((err) => res.status(500).json(err));
 });
 
-// get one product **** attempted do we need everything from up top ****
+// get one product
 router.get("/:id", (req, res) => {
   // find a single product by its `id`
   // be sure to include its associated Category and Tag data
@@ -28,7 +28,6 @@ router.get("/:id", (req, res) => {
     where: {
       id: req.params.id,
     },
-    // include: [{ model: Category }, { model: Tag }], does this work here? ***********
     include: [
       Category, 
       {
@@ -66,7 +65,7 @@ router.post("/", (req, res) => {
     });
 });
 
-// update product - done
+// update product
 router.put("/:id", (req, res) => {
   // update product data
   Product.update(req.body, {
